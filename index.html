@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezenwa Blessing | Content Architect</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Ezenwa Blessing | Content Architect">
+    <meta name="description" content="Ezenwa Blessing is a professional content architect, specializing in ghostwriting, content strategy, and health articles. Build your vision with creative storytelling.">
+    <meta name="keywords" content="Ezenwa Blessing, content architect, ghostwriting, content strategy, medical writing, creative writing">
+    <meta name="author" content="Ezenwa Blessing">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Ezenwa Blessing | Content Architect">
+    <meta property="og:description" content="Ezenwa Blessing is a professional content architect, specializing in ghostwriting, content strategy, and health articles.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Ezenwa Blessing | Content Architect">
+    <meta property="twitter:description" content="Ezenwa Blessing is a professional content architect, specializing in ghostwriting, content strategy, and health articles.">
+    <meta property="twitter:image" content="https://yourdomain.com/og-image.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/index.css">
+
+  
+    <style>
+        :root {
+            --color-cream: #FDFBF7;
+            --color-sage: #4A6741;
+            --color-dark: #1A1A1A;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--color-cream);
+            color: var(--color-dark);
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Grain Texture */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .page-transition {
+          animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .marquee {
+          white-space: nowrap;
+          animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--color-cream); }
+        ::-webkit-scrollbar-thumb { background: #E2D9C8; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--color-sage); }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0?external=react",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.11?external=react,react-dom",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="src/index.css">
+</head>
+<body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
