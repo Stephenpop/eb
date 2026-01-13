@@ -1,43 +1,39 @@
+import { lazy, Suspense, useEffect, useState } from 'react';
 
-import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar.tsx';
-import Footer from './components/Footer.tsx';
-import Home from './views/Home.tsx';
-import AboutPage from './views/AboutPage.tsx';
-import ProcessPage from './views/ProcessPage.tsx';
-import ContactPage from './views/ContactPage.tsx';
-import JournalPage from './views/JournalPage.tsx';
+const Home = lazy(() => import('./views/Home.tsx'));
+const AboutPage = lazy(() => import('./views/AboutPage.tsx'));
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Handle back button and direct linking simulation
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
+    setIsMobile(window.innerWidth < 768); // md breakpoint
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const renderPage = () => {
     switch(currentPage) {
-      case 'home': return <Home onNavigate={setCurrentPage} />;
-      case 'about': return <AboutPage />;
-      case 'process': return <ProcessPage />;
-      case 'contact': return <ContactPage />;
-      case 'journal': return <JournalPage />;
-      default: return <Home onNavigate={setCurrentPage} />;
+      case 'home': return <Home onNavigate={setCurrentPage} isMobile={isMobile} />;
+      case 'about': return <AboutPage isMobile={isMobile} />;
+      case 'process': return <ProcessPage isMobile={isMobile} />;
+      case 'contact': return <ContactPage isMobile={isMobile} />;
+      case 'journal': return <JournalPage isMobile={isMobile} />;
+      default: return <Home onNavigate={setCurrentPage} isMobile={isMobile} />;
     }
   };
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-[#4A6741] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navbar onNavigate={setCurrentPage} activePage={currentPage} />
       <main className="flex-grow">
-        <div key={currentPage} className="page-transition">
+        <Suspense fallback={<div className="py-24 text-center">Loading...</div>}>
           {renderPage()}
-        </div>
+        </Suspense>
       </main>
       <Footer onNavigate={setCurrentPage} />
     </div>
   );
 };
-
-export default App;
