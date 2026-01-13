@@ -77,7 +77,7 @@ const ContactPage: React.FC = () => {
               </div>
 
               <a
-                href="/blessing-ezenwa.pdf"
+                href="/ezenwa-blessing.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-3 bg-white text-black px-8 py-5 rounded-full font-bold hover:bg-[#4A6741] hover:text-white transition-all shadow-xl"
@@ -118,7 +118,7 @@ const ContactPage: React.FC = () => {
                       type="text"
                       name="name"
                       required
-                      placeholder="Johnathan"
+                      placeholder="Maryjane"
                       className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-8 py-4 md:py-5 outline-none transition-all"
                     />
                   </div>
@@ -129,7 +129,7 @@ const ContactPage: React.FC = () => {
                       type="email"
                       name="email"
                       required
-                      placeholder="john@domain.com"
+                      placeholder="maryjane@gmail.com"
                       className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-8 py-4 md:py-5 outline-none transition-all"
                     />
                   </div>
