@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote } from 'lucide-react';
@@ -36,9 +35,10 @@ const Testimonials: React.FC = () => {
 
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="relative bg-[#FDFBF7] rounded-[3rem] p-12 md:p-20 overflow-hidden border border-gray-100 shadow-sm">
-          <Quote className="absolute top-10 left-10 text-[#4A6741]/10 w-32 h-32 -rotate-12" />
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-6">
+        <div className="relative bg-[#FDFBF7] rounded-[3rem] p-8 sm:p-12 md:p-20 overflow-hidden border border-gray-100 shadow-sm
+                        w-full sm:w-[90%] mx-auto"> {/* mobile width adjustment */}
+          <Quote className="absolute top-8 left-8 text-[#4A6741]/10 w-24 h-24 sm:w-32 sm:h-32 -rotate-12" />
           
           <div className="relative z-10">
             <AnimatePresence mode="wait">
@@ -50,24 +50,24 @@ const Testimonials: React.FC = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="text-center"
               >
-                <p className="serif text-2xl md:text-3xl italic text-gray-800 leading-relaxed mb-12">
+                <p className="serif text-xl sm:text-2xl md:text-3xl italic text-gray-800 leading-relaxed mb-8 sm:mb-12">
                   "{testimonials[index].quote}"
                 </p>
                 
                 <div className="flex flex-col items-center">
-                  <img src={testimonials[index].img} alt={testimonials[index].author} className="w-16 h-16 rounded-full mb-4 border-2 border-[#4A6741]/20 p-1" />
-                  <h4 className="font-bold text-lg">{testimonials[index].author}</h4>
-                  <p className="text-xs uppercase tracking-widest text-[#4A6741] font-semibold">{testimonials[index].title}</p>
+                  <img src={testimonials[index].img} alt={testimonials[index].author} className="w-14 h-14 sm:w-16 sm:h-16 rounded-full mb-4 border-2 border-[#4A6741]/20 p-1" />
+                  <h4 className="font-bold text-base sm:text-lg">{testimonials[index].author}</h4>
+                  <p className="text-[9px] sm:text-xs uppercase tracking-widest text-[#4A6741] font-semibold">{testimonials[index].title}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
             
-            <div className="flex justify-center space-x-3 mt-12">
+            <div className="flex justify-center space-x-2 sm:space-x-3 mt-8 sm:mt-12">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setIndex(i)}
-                  className={`h-1.5 rounded-full transition-all duration-500 ${index === i ? 'w-8 bg-[#4A6741]' : 'w-2 bg-gray-200'}`}
+                  className={`h-1.5 rounded-full transition-all duration-500 ${index === i ? 'w-6 sm:w-8 bg-[#4A6741]' : 'w-2 sm:w-2 bg-gray-200'}`}
                 />
               ))}
             </div>
