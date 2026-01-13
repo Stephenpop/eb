@@ -77,7 +77,7 @@ const ContactPage: React.FC = () => {
               </div>
 
               <a
-                href="/blessing-ezenwa-resume.pdf"
+                href="/blessing-ezenwa.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-3 bg-white text-black px-8 py-5 rounded-full font-bold hover:bg-[#4A6741] hover:text-white transition-all shadow-xl"
