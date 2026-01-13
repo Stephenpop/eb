@@ -12,7 +12,7 @@ const AboutPage: React.FC = () => {
           <div className="relative">
             <div className="absolute -inset-10 bg-[#4A6741]/5 rounded-full blur-3xl pointer-events-none"></div>
             <img 
-              src="public/blessing.jpeg" 
+              src="/blessing.jpeg" 
               alt="Ezenwa Blessing" 
               className="relative z-10 rounded-[3rem] w-full aspect-[4/5] object-cover shadow-2xl" 
             />
