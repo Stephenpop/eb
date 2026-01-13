@@ -36,7 +36,7 @@ const ContactPage: React.FC = () => {
     <div className="pt-32 pb-24 bg-[#1A1A1A] text-white min-h-screen relative overflow-hidden flex flex-col">
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#4A6741]/20 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 relative z-10 w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           {/* Left column */}
           <div className="lg:col-span-5 w-full">
@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-6xl md:text-8xl lg:text-9xl serif font-bold mb-8 leading-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl serif font-bold mb-8 leading-tight">
                 Let's <br />
                 <span className="italic text-[#4A6741]">Write</span> History.
               </h1>
@@ -54,14 +54,14 @@ const ContactPage: React.FC = () => {
                 Currently taking bookings for executive ghostwriting and high-authority health content.
               </p>
 
-              <div className="space-y-8 mb-16">
+              <div className="space-y-6 sm:space-y-8 mb-12">
                 <a href={`mailto:${PROFILE.email}`} className="flex items-center space-x-6 group">
                   <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#4A6741] transition-all">
                     <Mail size={20} />
                   </div>
                   <div>
                     <p className="text-[9px] uppercase font-bold tracking-[0.3em] text-gray-500 mb-1">Email</p>
-                    <p className="text-xl font-medium truncate max-w-[200px] md:max-w-xs">{PROFILE.email}</p>
+                    <p className="text-xl font-medium truncate max-w-[200px] sm:max-w-xs">{PROFILE.email}</p>
                   </div>
                 </a>
 
@@ -103,43 +103,43 @@ const ContactPage: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-white p-8 md:p-12 lg:p-16 rounded-[2.5rem] md:rounded-[4rem] text-[#1A1A1A] shadow-2xl w-full"
+              className="bg-white p-6 sm:p-8 md:p-12 lg:p-16 rounded-[2.5rem] md:rounded-[4rem] text-[#1A1A1A] shadow-2xl w-full max-w-full sm:max-w-lg mx-auto lg:mx-0"
             >
               <div className="flex items-center space-x-3 mb-10">
                 <MessageSquare className="text-[#4A6741]" />
-                <h2 className="serif text-3xl md:text-4xl font-bold">New Project</h2>
+                <h2 className="serif text-2xl md:text-3xl font-bold">New Project</h2>
               </div>
 
-              <form className="space-y-6 md:space-y-8" onSubmit={handleSubmit}>
-                <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              <form className="space-y-4 sm:space-y-6 md:space-y-8" onSubmit={handleSubmit}>
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="space-y-2">
-                    <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400 ml-4">Full Name</label>
+                    <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400 ml-2 sm:ml-4">Full Name</label>
                     <input
                       type="text"
                       name="name"
                       required
                       placeholder="Maryjane"
-                      className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-8 py-4 md:py-5 outline-none transition-all"
+                      className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-6 sm:px-8 py-3 sm:py-4 md:py-5 outline-none transition-all"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400 ml-4">Email</label>
+                    <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400 ml-2 sm:ml-4">Email</label>
                     <input
                       type="email"
                       name="email"
                       required
                       placeholder="maryjane@gmail.com"
-                      className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-8 py-4 md:py-5 outline-none transition-all"
+                      className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-6 sm:px-8 py-3 sm:py-4 md:py-5 outline-none transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400 ml-4">Subject</label>
+                  <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400 ml-2 sm:ml-4">Subject</label>
                   <select
                     name="subject"
-                    className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-8 py-4 md:py-5 outline-none transition-all appearance-none text-gray-600"
+                    className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-6 sm:px-8 py-3 sm:py-4 md:py-5 outline-none transition-all appearance-none text-gray-600"
                   >
                     <option>Select Project Type</option>
                     <option>Ghostwriting Strategy</option>
@@ -149,19 +149,19 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400 ml-4">Your Vision</label>
+                  <label className="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400 ml-2 sm:ml-4">Your Vision</label>
                   <textarea
                     name="message"
                     required
                     rows={4}
                     placeholder="Describe the voice you want to project..."
-                    className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-8 py-4 md:py-5 outline-none transition-all resize-none"
+                    className="w-full bg-[#FDFBF7] border-2 border-transparent focus:border-[#4A6741] rounded-[1.5rem] md:rounded-[2rem] px-6 sm:px-8 py-3 sm:py-4 md:py-5 outline-none transition-all resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full group bg-[#1A1A1A] text-white py-5 md:py-6 rounded-full flex items-center justify-center space-x-4 hover:bg-[#4A6741] transition-all duration-500"
+                  className="w-full group bg-[#1A1A1A] text-white py-4 sm:py-5 md:py-6 rounded-full flex items-center justify-center space-x-3 sm:space-x-4 hover:bg-[#4A6741] transition-all duration-500"
                 >
                   <span className="font-bold uppercase tracking-[0.3em] text-xs">Send Message</span>
                   <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
